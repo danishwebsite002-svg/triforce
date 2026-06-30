@@ -121,11 +121,11 @@ a {
 }
 .hero-slider-nav {
     position: absolute;
-    bottom: 40px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: space-between;
     padding: 0 40px;
     z-index: 10;
 }
