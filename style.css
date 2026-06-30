@@ -121,11 +121,11 @@ a {
 }
 .hero-slider-nav {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 40px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 20px;
     padding: 0 40px;
     z-index: 10;
 }
@@ -855,7 +855,7 @@ a {
 }
 /* Responsive Timeline */
 @media screen and (max-width: 768px) {
-
+  .hero-slider-nav { display: none !important; }
   .contact-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
   .contact-info-wrapper { padding: 20px !important; }
   .contact-form-wrapper { padding: 20px !important; }
