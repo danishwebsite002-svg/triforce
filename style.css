@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --primary: #dc2626;
@@ -106,6 +106,49 @@ a {
     color: var(--secondary);
 }
 .nav a.active, .nav a:hover {
+    color: var(--primary);
+}
+
+/* Dropdown CSS */
+.nav .dropdown {
+    position: relative;
+}
+
+.nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 0;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.nav .dropdown-menu li {
+    width: 100%;
+}
+
+.nav .dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--secondary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav .dropdown-menu a:hover {
+    background-color: var(--light-bg);
     color: var(--primary);
 }
 
@@ -1264,4 +1307,259 @@ a {
   .hero-btn { padding: 12px 25px; font-size: 14px; }
   .slider-arrow { width: 40px; height: 40px; font-size: 16px; }
   .hero-slider-nav { padding: 0 15px; }
+}
+
+/* Building Materials Category Grid */
+.bm-categories-container {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bm-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.bm-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+.bm-header p {
+    font-size: 16px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bm-grid-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.bm-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.bm-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.bm-card:hover {
+    transform: translateY(-5px);
+}
+
+.bm-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bm-card:hover img {
+    transform: scale(1.05);
+}
+
+.bm-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    pointer-events: none;
+}
+
+.bm-card .bm-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.bm-card.large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.bm-card.large .bm-title {
+    font-size: 32px;
+    bottom: 30px;
+    left: 30px;
+}
+
+@media (max-width: 992px) {
+    .bm-grid-top {
+        grid-template-columns: 1fr 1fr;
+    }
+    .bm-card.large {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    .bm-grid-bottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bm-grid-top {
+        grid-template-columns: 1fr;
+    }
+    .bm-grid-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .bm-grid-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lubricants Sidebar and Grid Layout */
+.lube-page-wrapper {
+    display: flex;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.lube-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.lube-sidebar h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.lube-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.lube-sidebar ul li {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.lube-sidebar ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.lube-sidebar ul li a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.lube-content {
+    flex-grow: 1;
+}
+
+.lube-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.lube-card {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+}
+
+.lube-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lube-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.lube-card .category {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.lube-card .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.lube-card .btn-rfq {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.lube-card .btn-rfq:hover {
+    background-color: #004494;
+}
+
+@media (max-width: 1200px) {
+    .lube-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .lube-page-wrapper {
+        flex-direction: column;
+    }
+    .lube-sidebar {
+        width: 100%;
+    }
+    .lube-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .lube-grid {
+        grid-template-columns: 1fr;
+    }
 }
