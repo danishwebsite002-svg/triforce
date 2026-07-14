@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -50,7 +50,7 @@
             <li><a href="about.html">About Us</a></li>
             <li class="dropdown">
               <a href="products.html"
-                >PRODUCTS
+                >CATEGORIES
                 <i
                   class="fa-solid fa-plus"
                   style="
@@ -97,19 +97,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-slider-nav">
-        <div class="slider-arrow left">
-          <i class="fa-solid fa-arrow-left-long"></i>
-        </div>
-        <div class="slider-arrow right">
-          <i class="fa-solid fa-arrow-right-long"></i>
-        </div>
-      </div>
-      <div class="container hero-content">
+    <section class="hero" style="background-image: none;">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="bannervideo.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content" style="position: relative; z-index: 2;">
         <h1>Building your visions<br />Creating reality.</h1>
         <a href="about.html" class="btn btn-primary hero-btn"
-          >You'll Find it with Us. &rarr;</a
+          >About Us. &rarr;</a
         >
       </div>
     </section>
@@ -562,11 +558,11 @@
       <div class="container footer-grid">
         <!-- Col 1 -->
         <div class="footer-widget">
-          <div class="footer-logo mb-20">
+          <div class="footer-logo mb-20" style="text-align: center; transform: translateX(-30px);">
             <img
               src="logofooter.png"
               alt="TRIFORCE Logo"
-              style="max-height: 80px; width: auto; max-width: 100%"
+              style="max-height: 80px; width: auto; max-width: 100%; display: inline-block;"
             />
           </div>
           <p class="footer-desc">
@@ -576,9 +572,6 @@
             sourcing network, we serve businesses across the UAE and
             international markets with quality products and reliable service
           </p>
-          <a href="about.html" class="btn btn-primary btn-sm mt-20"
-            >Company Profile</a
-          >
         </div>
 
         <!-- Col 2 -->
@@ -592,7 +585,7 @@
             </li>
             <li>
               <a href="products.html"
-                ><i class="fa-solid fa-angle-right"></i> Our Products</a
+                ><i class="fa-solid fa-angle-right"></i> Categories</a
               >
             </li>
             <li>
@@ -676,55 +669,7 @@
     </footer>
 
     <script>
-      // Hero Slider Logic
-      const heroSection = document.querySelector(".hero");
-      const heroPrev = document.querySelector(".slider-arrow.left");
-      const heroNext = document.querySelector(".slider-arrow.right");
 
-      const slides = [
-        "url('hero_slide_2.png')",
-        "url('hero_slide_3.png')",
-        "url('gallery_steel_supply.png')",
-        "url('gallery_concrete_pour.png')",
-        "url('dubai_sheikh_zayed_road.png')",
-      ];
-
-      let currentSlide = 0;
-
-      function updateHeroBackground() {
-        heroSection.style.backgroundImage = `linear-gradient(rgba(13, 45, 94, 0.4), rgba(13, 45, 94, 0.2)), ${slides[currentSlide]}`;
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateHeroBackground();
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateHeroBackground();
-      }
-
-      if (heroNext)
-        heroNext.addEventListener("click", () => {
-          nextSlide();
-          resetTimer();
-        });
-      if (heroPrev)
-        heroPrev.addEventListener("click", () => {
-          prevSlide();
-          resetTimer();
-        });
-
-      let autoSlideTimer = setInterval(nextSlide, 5000);
-
-      function resetTimer() {
-        clearInterval(autoSlideTimer);
-        autoSlideTimer = setInterval(nextSlide, 5000);
-      }
-
-      // Initial setup
-      heroSection.style.transition = "background-image 0.5s ease-in-out";
     </script>
 
     <script>

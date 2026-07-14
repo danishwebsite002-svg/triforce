@@ -155,12 +155,31 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: linear-gradient(rgba(13, 45, 94, 0.4), rgba(13, 45, 94, 0.2)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
     padding: 220px 0 180px;
     color: var(--white);
     overflow: hidden;
+    background-color: var(--secondary); /* Fallback */
+}
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(13, 45, 94, 0.4), rgba(13, 45, 94, 0.2));
+    z-index: 1;
 }
 .hero-slider-nav {
     position: absolute;
@@ -1570,3 +1589,76 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Technical Supplies Grid */
+.tech-supplies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .tech-supplies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-supplies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-supplies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lubricants Grid */
+.lube-grid-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .lube-grid-4col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .lube-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .lube-grid-4col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Divisions Grid */
+.divisions-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .divisions-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .divisions-grid-3col {
+        grid-template-columns: 1fr;
+    }
+}
+
