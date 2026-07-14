@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -97,12 +97,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: none;">
+    <section class="hero" style="background-image: none">
       <video autoplay muted loop playsinline class="hero-video">
-        <source src="bannervideo.mp4" type="video/mp4">
+        <source src="bannervideo.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
-      <div class="container hero-content" style="position: relative; z-index: 2;">
+      <div
+        class="container hero-content"
+        style="position: relative; z-index: 2"
+      >
         <h1>Building your visions<br />Creating reality.</h1>
         <a href="about.html" class="btn btn-primary hero-btn"
           >About Us. &rarr;</a
@@ -150,7 +153,6 @@
     <section class="products pt-100 pb-100 bg-light position-relative">
       <div class="bg-text">Products</div>
       <div class="container position-relative z-10 text-center">
-        <span class="section-subtitle">PRODUCTS</span>
         <h2 class="section-title mb-50">Our Product</h2>
 
         <div class="products-marquee-container">
@@ -228,7 +230,9 @@
             transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: calc(33.333% - 20px);
+            min-width: 320px;
+            max-width: 380px;
             height: 400px;
             flex-shrink: 0;
             overflow: hidden;
@@ -558,11 +562,19 @@
       <div class="container footer-grid">
         <!-- Col 1 -->
         <div class="footer-widget">
-          <div class="footer-logo mb-20" style="text-align: center; transform: translateX(-30px);">
+          <div
+            class="footer-logo mb-20"
+            style="text-align: center; transform: translateX(-30px)"
+          >
             <img
               src="logofooter.png"
               alt="TRIFORCE Logo"
-              style="max-height: 80px; width: auto; max-width: 100%; display: inline-block;"
+              style="
+                max-height: 80px;
+                width: auto;
+                max-width: 100%;
+                display: inline-block;
+              "
             />
           </div>
           <p class="footer-desc">
@@ -668,9 +680,7 @@
       </div>
     </footer>
 
-    <script>
-
-    </script>
+    <script></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
