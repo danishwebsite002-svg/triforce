@@ -103,7 +103,7 @@ a {
 }
 .nav a {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--white);
 }
 .nav a.active, .nav a:hover {
