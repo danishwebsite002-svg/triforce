@@ -1668,19 +1668,19 @@ a {
 /* Glowing Header Button */
 @keyframes glowingButton {
     0% {
-        box-shadow: 0 0 5px var(--primary);
+        box-shadow: 0 0 5px var(--white);
     }
     50% {
-        box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary);
+        box-shadow: 0 0 20px var(--white), 0 0 30px var(--white);
     }
     100% {
-        box-shadow: 0 0 5px var(--primary);
+        box-shadow: 0 0 5px var(--white);
     }
 }
 
 .header-action .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--white);
     color: var(--white);
     animation: glowingButton 2s infinite;
     transition: all 0.3s ease;
@@ -1688,7 +1688,7 @@ a {
 
 .header-action .btn-outline:hover {
     animation: none;
-    box-shadow: 0 0 25px var(--primary), 0 0 40px var(--primary);
+    box-shadow: 0 0 25px var(--white), 0 0 40px var(--white);
     transform: scale(1.05);
     background-color: transparent;
     color: var(--white);
