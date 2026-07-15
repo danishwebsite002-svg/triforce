@@ -82,7 +82,7 @@ a {
 
 /* Header */
 .header {
-    background-color: var(--white);
+    background-color: transparent;
     padding: 0;
     position: absolute;
     width: 100%;
@@ -94,16 +94,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1600px;
 }
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 35px;
+    gap: 20px;
 }
 .nav a {
     font-weight: 500;
     font-size: 15px;
-    color: var(--secondary);
+    color: var(--white);
 }
 .nav a.active, .nav a:hover {
     color: var(--primary);
@@ -1663,3 +1664,32 @@ a {
     }
 }
 
+
+/* Glowing Header Button */
+@keyframes glowingButton {
+    0% {
+        box-shadow: 0 0 5px var(--primary);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--primary);
+    }
+}
+
+.header-action .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--white);
+    animation: glowingButton 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.header-action .btn-outline:hover {
+    animation: none;
+    box-shadow: 0 0 25px var(--primary), 0 0 40px var(--primary);
+    transform: scale(1.05);
+    background-color: transparent;
+    color: var(--white);
+}
