@@ -107,7 +107,7 @@ a {
     color: var(--white);
 }
 .nav a.active, .nav a:hover {
-    color: var(--primary);
+    color: #ffcc00;
 }
 
 /* Dropdown CSS */
@@ -684,7 +684,7 @@ a {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(13, 45, 94, 0.9) 0%, rgba(220, 38, 38, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(13, 45, 94, 0.9) 0%, rgba(21, 75, 147, 0.7) 100%);
     z-index: 1;
 }
 .parallax-content {
@@ -882,12 +882,12 @@ a {
     top: 30px;
     border-radius: 50%;
     z-index: 1;
-    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+    box-shadow: 0 0 0 4px rgba(21, 75, 147, 0.2);
     transition: all 0.3s ease;
 }
 .timeline-item:hover::after {
     background-color: var(--primary);
-    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 0 0 6px rgba(21, 75, 147, 0.4);
 }
 .timeline-left { left: 0; }
 .timeline-right { left: 50%; }
@@ -915,7 +915,7 @@ a {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 16px;
-    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 4px 10px rgba(21, 75, 147, 0.3);
 }
 /* Responsive Timeline */
 @media screen and (max-width: 768px) {
@@ -1694,3 +1694,4 @@ a {
     background-color: transparent;
     color: var(--white);
 }
+
