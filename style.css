@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --primary: #dc2626;
@@ -718,7 +718,7 @@ a {
     margin-bottom: 50px;
 }
 .widget-title {
-    color: var(--white);
+    color: #ffcc00;
     font-size: 18px;
     margin-bottom: 25px;
     font-weight: 600;
@@ -787,7 +787,7 @@ a {
     font-size: 14px;
 }
 .fb-links a {
-    color: #94a3b8;
+    color: #ffcc00;
 }
 .fb-links a:hover {
     color: var(--white);
