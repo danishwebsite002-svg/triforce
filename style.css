@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --primary: #dc2626;
@@ -150,7 +150,7 @@ a {
 
 .nav .dropdown-menu a:hover {
     background-color: var(--light-bg);
-    color: var(--primary);
+    color: #ffcc00;
 }
 
 /* Hero Section */
@@ -741,7 +741,7 @@ a {
     gap: 8px;
 }
 .footer-links a:hover {
-    color: var(--primary);
+    color: #ffcc00;
     transform: translateX(5px);
 }
 .footer-map img {
@@ -1131,7 +1131,7 @@ a {
 .projects-header-wrap .subtitle {
     position: relative;
     z-index: 1;
-    color: var(--secondary);
+    color: var(--white);
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
@@ -1289,7 +1289,7 @@ a {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--secondary);
     flex-direction: column;
     gap: 0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -1752,3 +1752,5 @@ a {
         font-size: 24px;
     }
 }
+
+
