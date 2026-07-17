@@ -591,7 +591,7 @@ a {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 250px;
+    grid-auto-rows: 350px;
     gap: 20px;
 }
 .gallery-item {
@@ -1381,15 +1381,15 @@ a {
 .bm-grid-top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 300px;
     gap: 15px;
     margin-bottom: 15px;
 }
 
 .bm-grid-bottom {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 250px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
     gap: 15px;
 }
 
@@ -1612,8 +1612,8 @@ a {
 /* Technical Supplies Grid */
 .tech-supplies-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 250px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
     gap: 15px;
 }
 
@@ -1639,7 +1639,7 @@ a {
 .lube-grid-4col {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 250px;
+    grid-auto-rows: 350px;
     gap: 15px;
 }
 
@@ -1665,7 +1665,7 @@ a {
 .divisions-grid-3col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px;
+    grid-auto-rows: 350px;
     gap: 20px;
 }
 
